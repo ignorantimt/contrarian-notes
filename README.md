@@ -1,39 +1,40 @@
-# Chirpy Starter
+# Contrarian Notes
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+非共识的认知与分析 —— 个人写作站。
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+- 网站：<https://ignorantimt.github.io/contrarian-notes>
+- 技术栈：Jekyll + [Chirpy 主题](https://github.com/cotes2020/jekyll-theme-chirpy)，托管于 GitHub Pages，push 到 `main` 后由 GitHub Actions 自动构建发布。
 
-## Why This Starter Exists
+## 写作流程
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+1. 在 `_posts/` 新建文件，命名格式：`YYYY-MM-DD-english-slug.md`
+2. 文件开头写 front matter：
 
-To unlock all features, the following files must be present in your Jekyll site:
+   ```markdown
+   ---
+   title: 文章标题
+   date: YYYY-MM-DD HH:MM:SS +0800
+   tags: [标签1, 标签2]
+   description: 一句话摘要（用于 SEO 和分享卡片）
+   ---
+   ```
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+3. `git add -A && git commit -m "add post: 标题" && git push` —— 几分钟后自动上线。
+
+草稿可放在 `_drafts/`（不会被发布）。
+
+## 本地预览（可选）
+
+需要 Ruby ≥ 3.2（macOS 自带版本太旧，可用 `brew install ruby` 或 rbenv 安装）：
+
+```bash
+bundle install
+bundle exec jekyll serve
+# 打开 http://localhost:4000/contrarian-notes/
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
-
-## Usage
-
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+不装本地环境也完全可以：直接 push，让 GitHub Actions 构建。
 
 ## License
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+主题部分遵循 [MIT](LICENSE) License；文章内容版权归原作者所有。
