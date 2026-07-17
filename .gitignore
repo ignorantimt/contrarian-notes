@@ -1,7 +1,6 @@
 # Bundler cache
 .bundle
 vendor
-Gemfile.lock
 
 # Jekyll cache
 .jekyll-cache
@@ -25,6 +24,7 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+assets/img/*-source.png
 
 # Hidden system files
 *~

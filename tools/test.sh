@@ -49,6 +49,9 @@ read_baseurl() {
 }
 
 main() {
+  # validate post and draft metadata before invoking Jekyll
+  bundle exec ruby tools/lint_content.rb
+
   # clean up
   if [[ -d $SITE_DIR ]]; then
     rm -rf "$SITE_DIR"

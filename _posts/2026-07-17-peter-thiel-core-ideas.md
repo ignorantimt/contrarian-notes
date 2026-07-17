@@ -61,7 +61,7 @@ toc: true
 
 | | 乐观 | 悲观 |
 |---|---|---|
-| **明确** | 有计划的乐观（1950 年代的美国：登月、州际公路） | 有计划的悲观（蒂尔特尔眼中的中国：储蓄、复制、追赶） |
+| **明确** | 有计划的乐观（1950 年代的美国：登月、州际公路） | 有计划的悲观（蒂尔眼中的中国：储蓄、复制、追赶） |
 | **不明确** | 无计划的乐观（当代美国：相信会更好，但不知道做什么，于是沉迷金融和多元化） | 无计划的悲观（欧洲：未来会变糟，只是不知道何时，于是提前享受） |
 
 他推崇的是**明确的乐观主义**：相信未来会显著更好，并且给出具体的计划去实现它。创业公司的本质就是一小群人带着明确计划去改变世界——这与"不明确的乐观"者把未来交给概率和组合完全不同。
@@ -98,4 +98,8 @@ toc: true
 
 ---
 
-*参考资料：彼得·蒂尔《从 0 到 1》（Zero to One, 2014）；勒内·吉拉尔的模仿欲望理论；霍华德·马克斯关于"非共识且正确"的投资备忘录。*
+## 参考资料
+
+- Peter Thiel with Blake Masters (2014), *Zero to One: Notes on Startups, or How to Build the Future*。
+- René Girard (1961), *Deceit, Desire and the Novel*；关于模仿欲望的思想来源。
+- Howard Marks (2001), [*You Can't Predict. You Can Prepare.*](https://www.oaktreecapital.com/docs/default-source/memos/2001-11-20-you-cant-predict-you-can-prepare.pdf)，其中明确区分了共识观点与“非共识且正确”。

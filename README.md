@@ -23,9 +23,15 @@
 
 草稿可放在 `_drafts/`（不会被发布）。
 
+提交前可运行内容校验，检查 front matter、文件名和重复 slug：
+
+```bash
+bundle exec ruby tools/lint_content.rb
+```
+
 ## 本地预览（可选）
 
-需要 Ruby ≥ 3.2（macOS 自带版本太旧，可用 `brew install ruby` 或 rbenv 安装）：
+需要 Ruby 3.2–3.4（Chirpy 7.6 暂不支持 Ruby 4；项目与 CI 固定使用 Ruby 3.4）：
 
 ```bash
 bundle install
@@ -34,6 +40,10 @@ bundle exec jekyll serve
 ```
 
 不装本地环境也完全可以：直接 push，让 GitHub Actions 构建。
+
+## 评论系统
+
+站点使用 Giscus 评论系统，评论按文章路径映射到 GitHub Discussions 的 `Announcements` 分类。
 
 ## License
 
