@@ -2,14 +2,26 @@
 # frozen_string_literal: true
 
 require "date"
+require "open3"
 require "yaml"
 
 POST_PATTERN = %r{\A_posts/\d{4}-\d{2}-\d{2}-.+\.(?:md|markdown)\z}
 REQUIRED_FIELDS = %w[title description tags].freeze
-CONTENT_GLOBS = ["_posts/*.{md,markdown}", "_drafts/*.{md,markdown}"].freeze
+CONTENT_GLOBS = ["_posts/*.{md,markdown}"].freeze
+PRIVATE_ROOTS = %w[_drafts research notes sources ideas research-log].freeze
 
 errors = []
 slugs = {}
+
+tracked_files, git_error, git_status = Open3.capture3("git", "ls-files", "-z")
+if git_status.success?
+  tracked_files.split("\0").each do |path|
+    private_root = PRIVATE_ROOTS.find { |root| path == root || path.start_with?("#{root}/") }
+    errors << "#{path}: private research path '#{private_root}/' must not be tracked in the public repository" if private_root
+  end
+else
+  errors << "unable to inspect tracked files (#{git_error.strip})"
+end
 
 Dir.glob(CONTENT_GLOBS).sort.each do |path|
   source = File.read(path, encoding: "UTF-8")

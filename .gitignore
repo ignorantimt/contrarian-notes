@@ -7,6 +7,14 @@ vendor
 .jekyll-metadata
 _site
 
+# Private research belongs in the separate contrarian-research repository
+_drafts/
+research/
+notes/
+sources/
+ideas/
+research-log/
+
 # RubyGems
 *.gem
 

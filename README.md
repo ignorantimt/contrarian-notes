@@ -7,8 +7,11 @@
 
 ## 写作流程
 
-1. 在 `_posts/` 新建文件，命名格式：`YYYY-MM-DD-english-slug.md`
-2. 文件开头写 front matter：
+研究过程、资料、笔记和未公开草稿保存在私有仓库 `contrarian-research`；本仓库只保存已经决定公开的文章和网站代码。
+
+1. 在私有仓库中完成研究与草稿。
+2. 决定公开后，将定稿复制到本仓库的 `_posts/`，命名格式：`YYYY-MM-DD-english-slug.md`。
+3. 文件开头写 front matter：
 
    ```markdown
    ---
@@ -19,15 +22,16 @@
    ---
    ```
 
-3. `git add -A && git commit -m "add post: 标题" && git push` —— 几分钟后自动上线。
-
-草稿可放在 `_drafts/`（不会被发布）。
+4. 运行内容校验，确认没有私有研究目录被纳入版本控制。
+5. 只暂存准备公开的文件，检查 `git diff --cached`，然后提交并推送；几分钟后自动上线。
 
 提交前可运行内容校验，检查 front matter、文件名和重复 slug：
 
 ```bash
 bundle exec ruby tools/lint_content.rb
 ```
+
+不要在本公开仓库中使用 `_drafts/`：Jekyll 虽然默认不发布它，但 GitHub 仍会公开其中的源码和历史记录。私有研究目录已加入 `.gitignore`，CI 还会拒绝任何意外追踪的 `_drafts/`、`research/`、`notes/`、`sources/`、`ideas/` 或 `research-log/` 文件。
 
 ## 本地预览（可选）
 
