@@ -1,4 +1,4 @@
-# Contrarian Notes
+# ignorantimt's notes
 
 非共识的认知与分析 —— 个人写作站。
 

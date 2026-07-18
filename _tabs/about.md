@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## 为什么叫 Contrarian Notes
+## 为什么叫 ignorantimt's notes
 
 彼得·蒂尔有一个著名的面试问题：
 
